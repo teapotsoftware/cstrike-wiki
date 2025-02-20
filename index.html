@@ -1,0 +1,1812 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Retro Website</title>
+    <style>
+        body {
+            background-color: #ffccff;
+            color: #000;
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            border: 3px dashed #ff00ff;
+            background-color: #fff;
+        }
+        h1,h2 {
+            text-shadow: 2px 2px 5px #ff00ff;
+        }
+        .marquee {
+            font-size: 20px;
+            color: #ff00ff;
+            font-weight: bold;
+        }
+        a {
+            color: blue;
+            text-decoration: underline;
+        }
+        .hidden-box {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            border: 2px solid #ff00ff;
+            background-color: #ffffcc;
+			white-space: pre-line;
+			text-align: left;
+			font-family: Courier New;
+        }
+        a {
+            color: blue;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function toggleText(id) {
+            var box = document.getElementById("bigTextBox" + id);
+            if (box.style.display === "none" || box.style.display === "") {
+                box.style.display = "block";
+            } else {
+                box.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <marquee class="marquee">teapot's cstrike wiki :3</marquee>
+    <div class="container">
+        <h1>Welcome to teapot's cstrike wiki!</h1>
+        <p>Trying to make shrimple docs for the new vscript features in cs source :3</p>
+		<h2>Function List</h2>
+        <a onclick="toggleText(1)">CBaseAnimating</a>
+        <div id="bigTextBox1" class="hidden-box">Function:    CBaseAnimating::BecomeRagdollOnClient
+Signature:   bool CBaseAnimating::BecomeRagdollOnClient(Vector)
+Description: Becomes a ragdoll with a force
+
+Function:    CBaseAnimating::DispatchAnimEvents
+Signature:   void CBaseAnimating::DispatchAnimEvents(handle)
+Description: Dispatch animation events to a CBaseAnimating
+
+Function:    CBaseAnimating::FindBodygroupByName
+Signature:   int CBaseAnimating::FindBodygroupByName(string)
+Description: Find a bodygroup id by name
+
+Function:    CBaseAnimating::GetAttachmentAngles
+Signature:   QAngle CBaseAnimating::GetAttachmentAngles(int)
+Description: Get the attachement id's angles as a p,y,r vector
+
+Function:    CBaseAnimating::GetAttachmentBone
+Signature:   int CBaseAnimating::GetAttachmentBone(int)
+Description: Get the named attachement's parent bone index
+
+Function:    CBaseAnimating::GetAttachmentOrigin
+Signature:   Vector CBaseAnimating::GetAttachmentOrigin(int)
+Description: Get the attachement id's origin vector
+
+Function:    CBaseAnimating::GetBodygroup
+Signature:   int CBaseAnimating::GetBodygroup(int)
+Description: Get a bodygroup by id
+
+Function:    CBaseAnimating::GetBodygroupName
+Signature:   string CBaseAnimating::GetBodygroupName(int)
+Description: Get the bodygroup id's name
+
+Function:    CBaseAnimating::GetBodygroupPartName
+Signature:   string CBaseAnimating::GetBodygroupPartName(int, int)
+Description: Get name by group and part
+
+Function:    CBaseAnimating::GetBoneAngles
+Signature:   QAngle CBaseAnimating::GetBoneAngles(int)
+Description: Get the bone id's angles as a p,y,r vector
+
+Function:    CBaseAnimating::GetBoneOrigin
+Signature:   Vector CBaseAnimating::GetBoneOrigin(int)
+Description: Get the bone id's origin vector
+
+Function:    CBaseAnimating::GetCycle
+Signature:   float CBaseAnimating::GetCycle()
+Description: Gets the models current cycle
+
+Function:    CBaseAnimating::GetModelScale
+Signature:   float CBaseAnimating::GetModelScale()
+
+Function:    CBaseAnimating::GetPlaybackRate
+Signature:   float CBaseAnimating::GetPlaybackRate()
+Description: Set the current playback rate.
+
+Function:    CBaseAnimating::GetSequence
+Signature:   int CBaseAnimating::GetSequence()
+Description: Get the current sequence id
+
+Function:    CBaseAnimating::GetSequenceActivityName
+Signature:   string CBaseAnimating::GetSequenceActivityName(int)
+Description: Get the activity name for a sequence by id
+
+Function:    CBaseAnimating::GetSequenceDuration
+Signature:   float CBaseAnimating::GetSequenceDuration(int)
+Description: Get a sequence duration by id
+
+Function:    CBaseAnimating::GetSequenceName
+Signature:   string CBaseAnimating::GetSequenceName(int)
+Description: Get a sequence name by id
+
+Function:    CBaseAnimating::GetSkin
+Signature:   int CBaseAnimating::GetSkin()
+Description: Gets the current skin index.
+
+Function:    CBaseAnimating::IsSequenceFinished
+Signature:   bool CBaseAnimating::IsSequenceFinished()
+Description: Ask whether the main sequence is done playing
+
+Function:    CBaseAnimating::LookupActivity
+Signature:   int CBaseAnimating::LookupActivity(string)
+Description: Get the named activity index
+
+Function:    CBaseAnimating::LookupAttachment
+Signature:   int CBaseAnimating::LookupAttachment(string)
+Description: Get the named attachement id
+
+Function:    CBaseAnimating::LookupBone
+Signature:   int CBaseAnimating::LookupBone(string)
+Description: Get the named bone index
+
+Function:    CBaseAnimating::LookupPoseParameter
+Signature:   int CBaseAnimating::LookupPoseParameter(string)
+Description: Looks up a pose parameter index by name
+
+Function:    CBaseAnimating::LookupSequence
+Signature:   int CBaseAnimating::LookupSequence(string)
+Description: Looks up a sequence by sequence name or activity name
+
+Function:    CBaseAnimating::ResetSequence
+Signature:   void CBaseAnimating::ResetSequence(int)
+Description: Reset a sequence by id. If the id is different than the current sequence, switch to the new sequence
+
+Function:    CBaseAnimating::SetBodygroup
+Signature:   void CBaseAnimating::SetBodygroup(int, int)
+Description: Sets a bodygroup
+
+Function:    CBaseAnimating::SetCycle
+Signature:   void CBaseAnimating::SetCycle(float)
+Description: Sets the models current cycle
+
+Function:    CBaseAnimating::SetModelScale
+Signature:   void CBaseAnimating::SetModelScale(float, float)
+Description: (scale, change_duration) Changes a model's scale over time
+
+Function:    CBaseAnimating::SetModelSimple
+Signature:   void CBaseAnimating::SetModelSimple(string)
+Description: Set a model for this entity. Matches easier behaviour of the SetModel input, automatically precaches, maintains sequence/cycle if possible.
+
+Function:    CBaseAnimating::SetPlaybackRate
+Signature:   void CBaseAnimating::SetPlaybackRate(float)
+Description: Set the current playback rate.
+
+Function:    CBaseAnimating::SetPoseParameter
+Signature:   float CBaseAnimating::SetPoseParameter(int, float)
+Description: (id, value) Sets a pose parameter value
+
+Function:    CBaseAnimating::SetSequence
+Signature:   void CBaseAnimating::SetSequence(int)
+Description: Set a sequence by id
+
+Function:    CBaseAnimating::SetSkin
+Signature:   void CBaseAnimating::SetSkin(int)
+Description: Sets the skin.
+
+Function:    CBaseAnimating::StopAnimation
+Signature:   void CBaseAnimating::StopAnimation()
+Description: Stop the current animation (same as SetPlaybackRate 0.0)
+
+Function:    CBaseAnimating::StudioFrameAdvance
+Signature:   void CBaseAnimating::StudioFrameAdvance()
+Description: Advance animation frame to some time in the future with an automatically calculated interval
+
+Function:    CBaseAnimating::StudioFrameAdvanceManual
+Signature:   void CBaseAnimating::StudioFrameAdvanceManual(float)
+Description: Advance animation frame to some time in the future with a manual interval
+        </div><br>
+        <a onclick="toggleText(2)">CBaseCombatCharacter</a>
+        <div id="bigTextBox2" class="hidden-box">Function:    CBaseCombatCharacter::GetLastKnownArea
+Signature:   handle CBaseCombatCharacter::GetLastKnownArea()
+Description: Return the last nav area occupied - NULL if unknown
+        </div><br>
+        <a onclick="toggleText(3)">CBaseCombatWeapon</a>
+        <div id="bigTextBox3" class="hidden-box">Function:    CBaseCombatWeapon::CanBeSelected
+Signature:   bool CBaseCombatWeapon::CanBeSelected()
+Description: Can this weapon be selected
+
+Function:    CBaseCombatWeapon::Clip1
+Signature:   int CBaseCombatWeapon::Clip1()
+Description: Current ammo in clip1
+
+Function:    CBaseCombatWeapon::Clip2
+Signature:   int CBaseCombatWeapon::Clip2()
+Description: Current ammo in clip2
+
+Function:    CBaseCombatWeapon::GetDefaultClip1
+Signature:   int CBaseCombatWeapon::GetDefaultClip1()
+Description: Default size of clip1
+
+Function:    CBaseCombatWeapon::GetDefaultClip2
+Signature:   int CBaseCombatWeapon::GetDefaultClip2()
+Description: Default size of clip2
+
+Function:    CBaseCombatWeapon::GetMaxClip1
+Signature:   int CBaseCombatWeapon::GetMaxClip1()
+Description: Max size of clip1
+
+Function:    CBaseCombatWeapon::GetMaxClip2
+Signature:   int CBaseCombatWeapon::GetMaxClip2()
+Description: Max size of clip2
+
+Function:    CBaseCombatWeapon::GetName
+Signature:   string CBaseCombatWeapon::GetName()
+Description: Gets the weapon's name
+
+Function:    CBaseCombatWeapon::GetPosition
+Signature:   int CBaseCombatWeapon::GetPosition()
+Description: Gets the weapon's current position
+
+Function:    CBaseCombatWeapon::GetPrimaryAmmoCount
+Signature:   int CBaseCombatWeapon::GetPrimaryAmmoCount()
+Description: Current primary ammo count if no clip is used or to give a player if they pick up this weapon legacy style (not TF)
+
+Function:    CBaseCombatWeapon::GetPrimaryAmmoType
+Signature:   int CBaseCombatWeapon::GetPrimaryAmmoType()
+Description: Returns the primary ammo type
+
+Function:    CBaseCombatWeapon::GetPrintName
+Signature:   string CBaseCombatWeapon::GetPrintName()
+Description: Gets the weapon's print name
+
+Function:    CBaseCombatWeapon::GetSecondaryAmmoCount
+Signature:   int CBaseCombatWeapon::GetSecondaryAmmoCount()
+Description: Current secondary ammo count if no clip is used or to give a player if they pick up this weapon legacy style (not TF)
+
+Function:    CBaseCombatWeapon::GetSecondaryAmmoType
+Signature:   int CBaseCombatWeapon::GetSecondaryAmmoType()
+Description: Returns the secondary ammo type
+
+Function:    CBaseCombatWeapon::GetSlot
+Signature:   int CBaseCombatWeapon::GetSlot()
+Description: Gets the weapon's current slot
+
+Function:    CBaseCombatWeapon::GetSubType
+Signature:   int CBaseCombatWeapon::GetSubType()
+Description: Get the weapon subtype
+
+Function:    CBaseCombatWeapon::GetWeaponFlags
+Signature:   int CBaseCombatWeapon::GetWeaponFlags()
+Description: Get the weapon flags
+
+Function:    CBaseCombatWeapon::GetWeight
+Signature:   int CBaseCombatWeapon::GetWeight()
+Description: Get the weapon weighting/importance
+
+Function:    CBaseCombatWeapon::HasAnyAmmo
+Signature:   bool CBaseCombatWeapon::HasAnyAmmo()
+Description: Do we have any ammo?
+
+Function:    CBaseCombatWeapon::HasPrimaryAmmo
+Signature:   bool CBaseCombatWeapon::HasPrimaryAmmo()
+Description: Do we have any primary ammo?
+
+Function:    CBaseCombatWeapon::HasSecondaryAmmo
+Signature:   bool CBaseCombatWeapon::HasSecondaryAmmo()
+Description: Do we have any secondary ammo?
+
+Function:    CBaseCombatWeapon::IsAllowedToSwitch
+Signature:   bool CBaseCombatWeapon::IsAllowedToSwitch()
+Description: Are we allowed to switch to this weapon?
+
+Function:    CBaseCombatWeapon::IsMeleeWeapon
+Signature:   bool CBaseCombatWeapon::IsMeleeWeapon()
+Description: Returns whether this is a melee weapon
+
+Function:    CBaseCombatWeapon::PrimaryAttack
+Signature:   void CBaseCombatWeapon::PrimaryAttack()
+Description: Force a primary attack
+
+Function:    CBaseCombatWeapon::SecondaryAttack
+Signature:   void CBaseCombatWeapon::SecondaryAttack()
+Description: Force a secondary attack
+
+Function:    CBaseCombatWeapon::SetClip1
+Signature:   void CBaseCombatWeapon::SetClip1(int)
+Description: Set current ammo in clip1
+
+Function:    CBaseCombatWeapon::SetClip2
+Signature:   void CBaseCombatWeapon::SetClip2(int)
+Description: Set current ammo in clip2
+
+Function:    CBaseCombatWeapon::SetCustomViewModel
+Signature:   void CBaseCombatWeapon::SetCustomViewModel(string)
+Description: Sets a custom view model for this weapon by model name
+
+Function:    CBaseCombatWeapon::SetCustomViewModelModelIndex
+Signature:   void CBaseCombatWeapon::SetCustomViewModelModelIndex(int)
+Description: Sets a custom view model for this weapon by modelindex
+
+Function:    CBaseCombatWeapon::SetSubType
+Signature:   void CBaseCombatWeapon::SetSubType(int)
+Description: Set the weapon subtype
+
+Function:    CBaseCombatWeapon::UsesClipsForAmmo1
+Signature:   bool CBaseCombatWeapon::UsesClipsForAmmo1()
+Description: Do we use clips for ammo 1?
+
+Function:    CBaseCombatWeapon::UsesClipsForAmmo2
+Signature:   bool CBaseCombatWeapon::UsesClipsForAmmo2()
+Description: Do we use clips for ammo 2?
+
+Function:    CBaseCombatWeapon::UsesPrimaryAmmo
+Signature:   bool CBaseCombatWeapon::UsesPrimaryAmmo()
+Description: Do we use primary ammo?
+
+Function:    CBaseCombatWeapon::UsesSecondaryAmmo
+Signature:   bool CBaseCombatWeapon::UsesSecondaryAmmo()
+Description: Do we use secondary ammo?
+
+Function:    CBaseCombatWeapon::VisibleInWeaponSelection
+Signature:   bool CBaseCombatWeapon::VisibleInWeaponSelection()
+Description: Is this weapon visible in weapon selection
+        </div><br>
+        <a onclick="toggleText(4)"><b>CBaseEntity</b></a>
+        <div id="bigTextBox4" class="hidden-box">NOTE: In any entity script scope, the variable "self" refers to the entity
+
+Function:    CBaseEntity::AcceptInput
+Signature:   bool CBaseEntity::AcceptInput(string, string, handle, handle)
+Description: Generate a synchronous I/O event
+
+Function:    CBaseEntity::AddEFlags
+Signature:   void CBaseEntity::AddEFlags(int)
+
+Function:    CBaseEntity::AddFlag
+Signature:   void CBaseEntity::AddFlag(int)
+
+Function:    CBaseEntity::AddSolidFlags
+Signature:   void CBaseEntity::AddSolidFlags(int)
+
+Function:    CBaseEntity::ApplyAbsVelocityImpulse
+Signature:   void CBaseEntity::ApplyAbsVelocityImpulse(Vector)
+Description: Apply a Velocity Impulse
+
+Function:    CBaseEntity::ApplyLocalAngularVelocityImpulse
+Signature:   void CBaseEntity::ApplyLocalAngularVelocityImpulse(Vector)
+Description: Apply an Ang Velocity Impulse
+
+Function:    CBaseEntity::ClearFlags
+Signature:   void CBaseEntity::ClearFlags()
+
+Function:    CBaseEntity::ClearSolidFlags
+Signature:   void CBaseEntity::ClearSolidFlags()
+
+Function:    CBaseEntity::ConnectOutput
+Signature:   void CBaseEntity::ConnectOutput(string, string)
+Description: Adds an I/O connection that will call the named function when the specified output fires
+
+Function:    CBaseEntity::Destroy
+Signature:   void CBaseEntity::Destroy()
+
+Function:    CBaseEntity::DisableDraw
+Signature:   void CBaseEntity::DisableDraw()
+Description: Enable drawing (removes EF_NODRAW)
+
+Function:    CBaseEntity::DisconnectOutput
+Signature:   void CBaseEntity::DisconnectOutput(string, string)
+Description: Removes a connected script function from an I/O event.
+
+Function:    CBaseEntity::DispatchSpawn
+Signature:   void CBaseEntity::DispatchSpawn()
+Description: Alternative dispatch spawn, same as the one in CEntities, for convenience.
+
+Function:    CBaseEntity::EmitSound
+Signature:   void CBaseEntity::EmitSound(string)
+Description: Plays a sound from this entity.
+
+Function:    CBaseEntity::EnableDraw
+Signature:   void CBaseEntity::EnableDraw()
+Description: Disable drawing (sets EF_NODRAW)
+
+Function:    CBaseEntity::EyeAngles
+Signature:   QAngle CBaseEntity::EyeAngles()
+Description: Returns the entity's eye angles
+
+Function:    CBaseEntity::EyePosition
+Signature:   Vector CBaseEntity::EyePosition()
+Description: Get vector to eye position - absolute coords
+
+Function:    CBaseEntity::FirstMoveChild
+Signature:   handle CBaseEntity::FirstMoveChild()
+
+Function:    CBaseEntity::GetAbsAngles
+Signature:   QAngle CBaseEntity::GetAbsAngles()
+Description: Get entity pitch, yaw, roll as QAngles
+
+Function:    CBaseEntity::GetAbsVelocity
+Signature:   Vector CBaseEntity::GetAbsVelocity()
+Description: Returns the current absolute velocity of the entity
+
+Function:    CBaseEntity::GetAngles
+Signature:   Vector CBaseEntity::GetAngles()
+Description: !!!LEGACY FOR COMPAT!!! DO NOT USE ME. Get entity pitch, yaw, roll as a vector
+
+Function:    CBaseEntity::GetAngularVelocity
+Signature:   Vector CBaseEntity::GetAngularVelocity()
+Description: Get the local angular velocity - returns a vector of pitch,yaw,roll
+
+Function:    CBaseEntity::GetBaseVelocity
+Signature:   Vector CBaseEntity::GetBaseVelocity()
+Description: Get Base velocity
+
+Function:    CBaseEntity::GetBoundingMaxs
+Signature:   Vector CBaseEntity::GetBoundingMaxs()
+Description: Get a vector containing max bounds, centered on object
+
+Function:    CBaseEntity::GetBoundingMaxsOriented
+Signature:   Vector CBaseEntity::GetBoundingMaxsOriented()
+Description: Get a vector containing max bounds, centered on object, taking the object's orientation into account
+
+Function:    CBaseEntity::GetBoundingMins
+Signature:   Vector CBaseEntity::GetBoundingMins()
+Description: Get a vector containing min bounds, centered on object
+
+Function:    CBaseEntity::GetBoundingMinsOriented
+Signature:   Vector CBaseEntity::GetBoundingMinsOriented()
+Description: Get a vector containing min bounds, centered on object, taking the object's orientation into account
+
+Function:    CBaseEntity::GetCenter
+Signature:   Vector CBaseEntity::GetCenter()
+Description: Get vector to center of object - absolute coords
+
+Function:    CBaseEntity::GetClassname
+Signature:   string CBaseEntity::GetClassname()
+
+Function:    CBaseEntity::GetCollisionGroup
+Signature:   int CBaseEntity::GetCollisionGroup()
+
+Function:    CBaseEntity::GetEFlags
+Signature:   int CBaseEntity::GetEFlags()
+
+Function:    CBaseEntity::GetEntityHandle
+Signature:   (unknown) CBaseEntity::GetEntityHandle()
+Description: Get the entity as an EHANDLE
+
+Function:    CBaseEntity::GetEntityIndex
+Signature:   int CBaseEntity::GetEntityIndex()
+
+Function:    CBaseEntity::GetFlags
+Signature:   int CBaseEntity::GetFlags()
+
+Function:    CBaseEntity::GetForwardVector
+Signature:   Vector CBaseEntity::GetForwardVector()
+Description: Get the forward vector of the entity
+
+Function:    CBaseEntity::GetFriction
+Signature:   float CBaseEntity::GetFriction()
+
+Function:    CBaseEntity::GetGravity
+Signature:   float CBaseEntity::GetGravity()
+
+Function:    CBaseEntity::GetHealth
+Signature:   int CBaseEntity::GetHealth()
+
+Function:    CBaseEntity::GetLeftVector
+Signature:   Vector CBaseEntity::GetLeftVector()
+Description: !!!LEGACY FOR COMPAT!!! Get the **right** vector of the entity. This is purely for compatibility. DO NOT USE ME. Use GetRightVector!
+
+Function:    CBaseEntity::GetLocalAngles
+Signature:   QAngle CBaseEntity::GetLocalAngles()
+
+Function:    CBaseEntity::GetLocalOrigin
+Signature:   Vector CBaseEntity::GetLocalOrigin()
+
+Function:    CBaseEntity::GetLocalVelocity
+Signature:   Vector CBaseEntity::GetLocalVelocity()
+Description: Get Entity relative velocity
+
+Function:    CBaseEntity::GetMaxHealth
+Signature:   int CBaseEntity::GetMaxHealth()
+
+Function:    CBaseEntity::GetModelKeyValues
+Signature:   handle CBaseEntity::GetModelKeyValues()
+Description: Get a KeyValue class instance on this entity's model
+
+Function:    CBaseEntity::GetModelName
+Signature:   string CBaseEntity::GetModelName()
+Description: Returns the name of the model
+
+Function:    CBaseEntity::GetMoveParent
+Signature:   handle CBaseEntity::GetMoveParent()
+Description: If in hierarchy, retrieves the entity's parent
+
+Function:    CBaseEntity::GetMoveType
+Signature:   int CBaseEntity::GetMoveType()
+
+Function:    CBaseEntity::GetName
+Signature:   string CBaseEntity::GetName()
+
+Function:    CBaseEntity::GetOrigin
+Signature:   Vector CBaseEntity::GetOrigin()
+Description: This is GetAbsOrigin with a funny script name for some reason. Not changing it for legacy compat though.
+
+Function:    CBaseEntity::GetOwner
+Signature:   handle CBaseEntity::GetOwner()
+Description: Gets this entity's owner
+
+Function:    CBaseEntity::GetPhysAngularVelocity
+Signature:   Vector CBaseEntity::GetPhysAngularVelocity()
+
+Function:    CBaseEntity::GetPhysVelocity
+Signature:   Vector CBaseEntity::GetPhysVelocity()
+
+Function:    CBaseEntity::GetPreTemplateName
+Signature:   string CBaseEntity::GetPreTemplateName()
+Description: Get the entity name stripped of template unique decoration
+
+Function:    CBaseEntity::GetRightVector
+Signature:   Vector CBaseEntity::GetRightVector()
+Description: Get the right vector of the entity
+
+Function:    CBaseEntity::GetRootMoveParent
+Signature:   handle CBaseEntity::GetRootMoveParent()
+Description: If in hierarchy, walks up the hierarchy to find the root parent
+
+Function:    CBaseEntity::GetScriptId
+Signature:   string CBaseEntity::GetScriptId()
+Description: Retrieve the unique identifier used to refer to the entity within the scripting system
+
+Function:    CBaseEntity::GetScriptScope
+Signature:   handle CBaseEntity::GetScriptScope()
+Description: Retrieve the script-side data associated with an entity
+
+Function:    CBaseEntity::GetScriptThinkFunc
+Signature:   string CBaseEntity::GetScriptThinkFunc()
+Description: Retrieve the name of the current script think func
+
+Function:    CBaseEntity::GetSolid
+Signature:   int CBaseEntity::GetSolid()
+
+Function:    CBaseEntity::GetSoundDuration
+Signature:   float CBaseEntity::GetSoundDuration(string, string)
+Description: Returns float duration of the sound. Takes soundname and optional actormodelname.
+
+Function:    CBaseEntity::GetTeam
+Signature:   int CBaseEntity::GetTeam()
+
+Function:    CBaseEntity::GetUpVector
+Signature:   Vector CBaseEntity::GetUpVector()
+Description: Get the up vector of the entity
+
+Function:    CBaseEntity::GetVelocity
+Signature:   Vector CBaseEntity::GetVelocity()
+Description: !!!LEGACY FOR COMPAT!!! Use GetAbsVelocity
+
+Function:    CBaseEntity::GetWaterLevel
+Signature:   int CBaseEntity::GetWaterLevel()
+
+Function:    CBaseEntity::GetWaterType
+Signature:   int CBaseEntity::GetWaterType()
+
+Function:    CBaseEntity::IsAlive
+Signature:   bool CBaseEntity::IsAlive()
+
+Function:    CBaseEntity::IsEFlagSet
+Signature:   bool CBaseEntity::IsEFlagSet(int)
+
+Function:    CBaseEntity::IsPlayer
+Signature:   bool CBaseEntity::IsPlayer()
+
+Function:    CBaseEntity::IsSolid
+Signature:   bool CBaseEntity::IsSolid()
+
+Function:    CBaseEntity::IsSolidFlagSet
+Signature:   bool CBaseEntity::IsSolidFlagSet(int)
+
+Function:    CBaseEntity::KeyValueFromFloat
+Signature:   bool CBaseEntity::KeyValueFromFloat(string, float)
+Description: Executes KeyValue with a float
+
+Function:    CBaseEntity::KeyValueFromInt
+Signature:   bool CBaseEntity::KeyValueFromInt(string, int)
+Description: Executes KeyValue with an int
+
+Function:    CBaseEntity::KeyValueFromString
+Signature:   bool CBaseEntity::KeyValueFromString(string, string)
+Description: Executes KeyValue with a string
+
+Function:    CBaseEntity::KeyValueFromVector
+Signature:   bool CBaseEntity::KeyValueFromVector(string, Vector)
+Description: Executes KeyValue with a vector
+
+Function:    CBaseEntity::Kill
+Signature:   void CBaseEntity::Kill()
+
+Function:    CBaseEntity::LocalEyeAngles
+Signature:   QAngle CBaseEntity::LocalEyeAngles()
+Description: Returns the entity's local eye angles
+
+Function:    CBaseEntity::NextMovePeer
+Signature:   handle CBaseEntity::NextMovePeer()
+
+Function:    CBaseEntity::PrecacheModel
+Signature:   void CBaseEntity::PrecacheModel(string)
+
+Function:    CBaseEntity::PrecacheScriptSound
+Signature:   void CBaseEntity::PrecacheScriptSound(string)
+
+Function:    CBaseEntity::PrecacheSoundScript
+Signature:   void CBaseEntity::PrecacheSoundScript(string)
+Description: Precache a sound for later playing.
+
+Function:    CBaseEntity::RemoveEFlags
+Signature:   void CBaseEntity::RemoveEFlags(int)
+
+Function:    CBaseEntity::RemoveFlag
+Signature:   void CBaseEntity::RemoveFlag(int)
+
+Function:    CBaseEntity::RemoveSolidFlags
+Signature:   void CBaseEntity::RemoveSolidFlags(int)
+
+Function:    CBaseEntity::SetAbsAngles
+Signature:   void CBaseEntity::SetAbsAngles(QAngle)
+Description: Set entity pitch, yaw, roll as QAngles
+
+Function:    CBaseEntity::SetAbsOrigin
+Signature:   void CBaseEntity::SetAbsOrigin(Vector)
+Description: SetAbsOrigin
+
+Function:    CBaseEntity::SetAbsVelocity
+Signature:   void CBaseEntity::SetAbsVelocity(Vector)
+Description: Sets the current absolute velocity of the entity
+
+Function:    CBaseEntity::SetAngles
+Signature:   void CBaseEntity::SetAngles(float, float, float)
+Description: !!!LEGACY FOR COMPAT!!! DO NOT USE ME. Set entity pitch, yaw, roll
+
+Function:    CBaseEntity::SetAngularVelocity
+Signature:   void CBaseEntity::SetAngularVelocity(float, float, float)
+Description: Set the local angular velocity - takes float pitch,yaw,roll velocities
+
+Function:    CBaseEntity::SetCollisionGroup
+Signature:   void CBaseEntity::SetCollisionGroup(int)
+
+Function:    CBaseEntity::SetDrawEnabled
+Signature:   void CBaseEntity::SetDrawEnabled(bool)
+Description: Enables drawing if you pass true, disables drawing if you pass false.
+
+Function:    CBaseEntity::SetEFlags
+Signature:   void CBaseEntity::SetEFlags(int)
+
+Function:    CBaseEntity::SetForwardVector
+Signature:   void CBaseEntity::SetForwardVector(Vector)
+Description: Set the orientation of the entity to have this forward vector
+
+Function:    CBaseEntity::SetFriction
+Signature:   void CBaseEntity::SetFriction(float)
+
+Function:    CBaseEntity::SetGravity
+Signature:   void CBaseEntity::SetGravity(float)
+
+Function:    CBaseEntity::SetHealth
+Signature:   void CBaseEntity::SetHealth(int)
+
+Function:    CBaseEntity::SetLocalAngles
+Signature:   void CBaseEntity::SetLocalAngles(QAngle)
+
+Function:    CBaseEntity::SetLocalOrigin
+Signature:   void CBaseEntity::SetLocalOrigin(Vector)
+
+Function:    CBaseEntity::SetMaxHealth
+Signature:   void CBaseEntity::SetMaxHealth(int)
+
+Function:    CBaseEntity::SetModel
+Signature:   void CBaseEntity::SetModel(string)
+Description: Set a model for this entity
+
+Function:    CBaseEntity::SetMoveType
+Signature:   void CBaseEntity::SetMoveType(int, int)
+
+Function:    CBaseEntity::SetOrigin
+Signature:   void CBaseEntity::SetOrigin(Vector)
+Description: THIS DOESNT CALL SetAbsOrigin IT CALLS Teleport
+
+Function:    CBaseEntity::SetOwner
+Signature:   void CBaseEntity::SetOwner(handle)
+Description: Sets this entity's owner
+
+Function:    CBaseEntity::SetPhysAngularVelocity
+Signature:   void CBaseEntity::SetPhysAngularVelocity(Vector)
+
+Function:    CBaseEntity::SetPhysVelocity
+Signature:   void CBaseEntity::SetPhysVelocity(Vector)
+
+Function:    CBaseEntity::SetSize
+Signature:   void CBaseEntity::SetSize(Vector, Vector)
+
+Function:    CBaseEntity::SetSolid
+Signature:   void CBaseEntity::SetSolid(int)
+
+Function:    CBaseEntity::SetSolidFlags
+Signature:   void CBaseEntity::SetSolidFlags(int)
+
+Function:    CBaseEntity::SetTeam
+Signature:   void CBaseEntity::SetTeam(int)
+
+Function:    CBaseEntity::SetVelocity
+Signature:   void CBaseEntity::SetVelocity(Vector)
+Description: !!!LEGACY FOR COMPAT!!! Use SetAbsVelocity
+
+Function:    CBaseEntity::SetWaterLevel
+Signature:   void CBaseEntity::SetWaterLevel(int)
+
+Function:    CBaseEntity::SetWaterType
+Signature:   void CBaseEntity::SetWaterType(int)
+
+Function:    CBaseEntity::StopSound
+Signature:   void CBaseEntity::StopSound(string)
+Description: Stops a sound on this entity.
+
+Function:    CBaseEntity::TakeDamage
+Signature:   void CBaseEntity::TakeDamage(float, int, handle)
+Description: (flDamage, nDamageType, hAttacker)
+
+Function:    CBaseEntity::TakeDamageCustom
+Signature:   void CBaseEntity::TakeDamageCustom(handle, handle, handle, Vector, Vector, float, int, int)
+Description: (hInflictor, hAttacker, hWeapon, vecDamageForce, vecDamagePosition, flDamage, nDamageType, nCustomDamageType)
+
+Function:    CBaseEntity::TakeDamageEx
+Signature:   void CBaseEntity::TakeDamageEx(handle, handle, handle, Vector, Vector, float, int)
+Description: (hInflictor, hAttacker, hWeapon, vecDamageForce, vecDamagePosition, flDamage, nDamageType)
+
+Function:    CBaseEntity::Teleport
+Signature:   void CBaseEntity::Teleport(bool, Vector, bool, QAngle, bool, Vector)
+Description: Teleports this entity
+
+Function:    CBaseEntity::TerminateScriptScope
+Signature:   void CBaseEntity::TerminateScriptScope()
+Description: Clear the current script scope for this entity
+
+Function:    CBaseEntity::ToggleFlag
+Signature:   void CBaseEntity::ToggleFlag(int)
+
+Function:    CBaseEntity::ValidateScriptScope
+Signature:   bool CBaseEntity::ValidateScriptScope()
+Description: Ensure that an entity's script scope has been created
+
+Function:    CBaseEntity::entindex
+Signature:   int CBaseEntity::entindex()
+        </div><br>
+        <a onclick="toggleText(5)">CBaseFlex</a>
+        <div id="bigTextBox5" class="hidden-box">Function:    CBaseFlex::PlayScene
+Signature:   float CBaseFlex::PlayScene(string, float)
+Description: Play the specified .vcd file.
+        </div><br>
+        <a onclick="toggleText(6)"><b>CBasePlayer</b></a>
+        <div id="bigTextBox6" class="hidden-box">Function:    CBasePlayer::GetForceLocalDraw
+Signature:   bool CBasePlayer::GetForceLocalDraw()
+Description: Gets the state of whether the player is being forced by SetForceLocalDraw to be drawn
+
+Function:    CBasePlayer::GetPlayerMaxs
+Signature:   <unknown> CBasePlayer::GetPlayerMaxs()
+
+Function:    CBasePlayer::GetPlayerMins
+Signature:   <unknown> CBasePlayer::GetPlayerMins()
+
+Function:    CBasePlayer::GetScriptOverlayMaterial
+Signature:   string CBasePlayer::GetScriptOverlayMaterial()
+Description: Gets the current view overlay material
+
+Function:    CBasePlayer::IsNoclipping
+Signature:   bool CBasePlayer::IsNoclipping()
+Description: Returns true if the player is in noclip mode.
+
+Function:    CBasePlayer::SetForceLocalDraw
+Signature:   void CBasePlayer::SetForceLocalDraw(bool)
+Description: Forces the player to be drawn as if they are third person
+
+Function:    CBasePlayer::SetScriptOverlayMaterial
+Signature:   void CBasePlayer::SetScriptOverlayMaterial(string)
+Description: Sets a view overlay material
+
+Function:    CBasePlayer::SnapEyeAngles
+Signature:   void CBasePlayer::SnapEyeAngles(QAngle)
+Description: Snap the player's eye angles to this.
+
+Function:    CBasePlayer::ViewPunch
+Signature:   void CBasePlayer::ViewPunch(QAngle)
+Description: Ow! Punches the player's view
+
+Function:    CBasePlayer::ViewPunchReset
+Signature:   void CBasePlayer::ViewPunchReset(float)
+Description: Reset's the player's view punch
+        </div><br>
+        <a onclick="toggleText(7)"><b>CEntities</b></a>
+        <div id="bigTextBox7" class="hidden-box">NOTE: Can be accessed with "Entities" global, for example: Entities.CreateByClassname("weapon_deagle")
+		
+		Function:    CEntities::CreateByClassname
+Signature:   handle CEntities::CreateByClassname(string)
+Description: Creates an entity by classname
+
+Function:    CEntities::DispatchSpawn
+Signature:   void CEntities::DispatchSpawn(handle)
+Description: Dispatches spawn of an entity!
+
+Function:    CEntities::FindByClassname
+Signature:   handle CEntities::FindByClassname(handle, string)
+Description: Find entities by class name. Pass 'null' to start an iteration, or reference to a previously found entity to continue a search
+
+Function:    CEntities::FindByClassnameNearest
+Signature:   handle CEntities::FindByClassnameNearest(string, Vector, float)
+Description: Find entities by class name nearest to a point.
+
+Function:    CEntities::FindByClassnameWithin
+Signature:   handle CEntities::FindByClassnameWithin(handle, string, Vector, float)
+Description: Find entities by class name within a radius. Pass 'null' to start an iteration, or reference to a previously found entity to continue a search
+
+Function:    CEntities::FindByModel
+Signature:   handle CEntities::FindByModel(handle, string)
+Description: Find entities by model name. Pass 'null' to start an iteration, or reference to a previously found entity to continue a search
+
+Function:    CEntities::FindByName
+Signature:   handle CEntities::FindByName(handle, string)
+Description: Find entities by name. Pass 'null' to start an iteration, or reference to a previously found entity to continue a search
+
+Function:    CEntities::FindByNameNearest
+Signature:   handle CEntities::FindByNameNearest(string, Vector, float)
+Description: Find entities by name nearest to a point.
+
+Function:    CEntities::FindByNameWithin
+Signature:   handle CEntities::FindByNameWithin(handle, string, Vector, float)
+Description: Find entities by name within a radius. Pass 'null' to start an iteration, or reference to a previously found entity to continue a search
+
+Function:    CEntities::FindByTarget
+Signature:   handle CEntities::FindByTarget(handle, string)
+Description: Find entities by targetname. Pass 'null' to start an iteration, or reference to a previously found entity to continue a search
+
+Function:    CEntities::FindInSphere
+Signature:   handle CEntities::FindInSphere(handle, Vector, float)
+Description: Find entities within a radius. Pass 'null' to start an iteration, or reference to a previously found entity to continue a search
+
+Function:    CEntities::First
+Signature:   handle CEntities::First()
+Description: Begin an iteration over the list of entities
+
+Function:    CEntities::Next
+Signature:   handle CEntities::Next(handle)
+Description: Continue an iteration over the list of entities, providing reference to a previously found entity
+        </div><br>
+        <a onclick="toggleText(8)">CEnvEntityMaker</a>
+        <div id="bigTextBox8" class="hidden-box">Function:    CEnvEntityMaker::SpawnEntity
+Signature:   void CEnvEntityMaker::SpawnEntity()
+Description: Create an entity at the location of the maker
+
+Function:    CEnvEntityMaker::SpawnEntityAtEntityOrigin
+Signature:   void CEnvEntityMaker::SpawnEntityAtEntityOrigin(handle)
+Description: Create an entity at the location of a specified entity instance
+
+Function:    CEnvEntityMaker::SpawnEntityAtLocation
+Signature:   void CEnvEntityMaker::SpawnEntityAtLocation(Vector, Vector)
+Description: Create an entity at a specified location and orientaton, orientation is Euler angle in degrees (pitch, yaw, roll)
+
+Function:    CEnvEntityMaker::SpawnEntityAtNamedEntityOrigin
+Signature:   void CEnvEntityMaker::SpawnEntityAtNamedEntityOrigin(string)
+Description: Create an entity at the location of a named entity
+        </div><br>
+        <a onclick="toggleText(9)">CFuncTrackTrain</a>
+        <div id="bigTextBox9" class="hidden-box">Function:    CFuncTrackTrain::GetFuturePosition
+Signature:   Vector CFuncTrackTrain::GetFuturePosition(float, float)
+Description: Get a position on the track x seconds in the future
+        </div><br>
+        <a onclick="toggleText(10)">CNavMesh</a>
+        <div id="bigTextBox10" class="hidden-box">NOTE: Can be accessed with "NavMesh" global
+
+Function:    CNavMesh::FindNavAreaAlongRay
+Signature:   handle CNavMesh::FindNavAreaAlongRay(Vector, Vector, handle)
+Description: Arguments: ( startpos, endpos, ignoreAreaID ) - get nav area from ray
+
+Function:    CNavMesh::GetAllAreas
+Signature:   void CNavMesh::GetAllAreas(handle)
+Description: Arguments: ( table ) - fills a passed in table of all nav areas
+
+Function:    CNavMesh::GetAreasWithAttributes
+Signature:   void CNavMesh::GetAreasWithAttributes(int, handle)
+Description: Arguments: ( bits, table ) - fills a passed in table of all nav areas that have the specified attributes
+
+Function:    CNavMesh::GetNavArea
+Signature:   handle CNavMesh::GetNavArea(Vector, float)
+Description: Arguments: ( origin, flBeneath ) - given a position in the world, return the nav area that is closest to or below that height.
+
+Function:    CNavMesh::GetNavAreaByID
+Signature:   handle CNavMesh::GetNavAreaByID(int)
+Description: Arguments: ( areaID ) - get nav area by ID
+
+Function:    CNavMesh::GetNavAreaCount
+Signature:   int CNavMesh::GetNavAreaCount()
+Description: return total number of nav areas
+
+Function:    CNavMesh::GetNavAreasFromBuildPath
+Signature:   bool CNavMesh::GetNavAreasFromBuildPath(handle, handle, Vector, float, int, bool, handle)
+Description: Arguments: ( table ) - Fills the table with areas from a path. Returns whether a path was found
+
+Function:    CNavMesh::GetNavAreasInRadius
+Signature:   void CNavMesh::GetNavAreasInRadius(Vector, float, handle)
+Description: Arguments: ( origin, radius, table ) - fills a passed in table of nav areas within radius
+
+Function:    CNavMesh::GetNavAreasOverlappingEntityExtent
+Signature:   void CNavMesh::GetNavAreasOverlappingEntityExtent(handle, handle)
+Description: Arguments: ( entity, table ) - fills passed in table with areas overlapping entity's extent
+
+Function:    CNavMesh::GetNearestNavArea
+Signature:   handle CNavMesh::GetNearestNavArea(Vector, float, bool, bool)
+Description: Arguments: ( origin, maxDist, checkLOS, checkGround ) - given a position in the world, return the nav area that is closest to or below that height.
+
+Function:    CNavMesh::GetObstructingEntities
+Signature:   void CNavMesh::GetObstructingEntities(handle)
+Description: Arguments: ( table ) - fills a passed in table of all obstructing entities
+
+Function:    CNavMesh::NavAreaBuildPath
+Signature:   bool CNavMesh::NavAreaBuildPath(handle, handle, Vector, float, int, bool)
+Description: Arguments: ( area, area, goalPos, flMaxPathLength, teamID, ignoreNavBlockers ) - returns true if a path exists
+
+Function:    CNavMesh::NavAreaTravelDistance
+Signature:   float CNavMesh::NavAreaTravelDistance(handle, handle, float)
+Description: Arguments: ( area, area, flMaxPathLength ) - compute distance between two areas. Return -1 if can't reach 'endArea' from 'startArea'
+
+Function:    CNavMesh::RegisterAvoidanceObstacle
+Signature:   void CNavMesh::RegisterAvoidanceObstacle(handle)
+Description: Arguments: ( entity ) - registers avoidance obstacle
+
+Function:    CNavMesh::UnregisterAvoidanceObstacle
+Signature:   void CNavMesh::UnregisterAvoidanceObstacle(handle)
+Description: Arguments: ( entity ) - unregisters avoidance obstacle
+        </div><br>
+        <a onclick="toggleText(11)"><b>CNetPropManager</b></a>
+        <div id="bigTextBox11" class="hidden-box">NOTE: Can be accessed with "NetProps" global, for example: NetProps.GetPropString(ply, "m_szNetname")
+NOTE2: "Prop" in this case is short for "property" and not prop_* entities
+		
+Function:    CNetPropManager::GetPropArraySize
+Signature:   int CNetPropManager::GetPropArraySize(handle, string)
+Description: Arguments: ( entity, propertyName )
+
+Function:    CNetPropManager::GetPropBool
+Signature:   bool CNetPropManager::GetPropBool(handle, string)
+Description: Arguments: ( entity, propertyName )
+
+Function:    CNetPropManager::GetPropBoolArray
+Signature:   bool CNetPropManager::GetPropBoolArray(handle, string, int)
+Description: Arguments: ( entity, propertyName, arrayElement )
+
+Function:    CNetPropManager::GetPropEntity
+Signature:   handle CNetPropManager::GetPropEntity(handle, string)
+Description: Arguments: ( entity, propertyName ) - returns an entity
+
+Function:    CNetPropManager::GetPropEntityArray
+Signature:   handle CNetPropManager::GetPropEntityArray(handle, string, int)
+Description: Arguments: ( entity, propertyName, arrayElement ) - returns an entity
+
+Function:    CNetPropManager::GetPropFloat
+Signature:   float CNetPropManager::GetPropFloat(handle, string)
+Description: Arguments: ( entity, propertyName )
+
+Function:    CNetPropManager::GetPropFloatArray
+Signature:   float CNetPropManager::GetPropFloatArray(handle, string, int)
+Description: Arguments: ( entity, propertyName, arrayElement )
+
+Function:    CNetPropManager::GetPropInfo
+Signature:   bool CNetPropManager::GetPropInfo(handle, string, int, handle)
+Description: Arguments: ( entity, propertyName, arrayElement, table ) - Fills in a passed table with property info for the provided entity
+
+Function:    CNetPropManager::GetPropInt
+Signature:   int CNetPropManager::GetPropInt(handle, string)
+Description: Arguments: ( entity, propertyName )
+
+Function:    CNetPropManager::GetPropIntArray
+Signature:   int CNetPropManager::GetPropIntArray(handle, string, int)
+Description: Arguments: ( entity, propertyName, arrayElement )
+
+Function:    CNetPropManager::GetPropString
+Signature:   string CNetPropManager::GetPropString(handle, string)
+Description: Arguments: ( entity, propertyName )
+
+Function:    CNetPropManager::GetPropStringArray
+Signature:   string CNetPropManager::GetPropStringArray(handle, string, int)
+Description: Arguments: ( entity, propertyName, arrayElement )
+
+Function:    CNetPropManager::GetPropType
+Signature:   string CNetPropManager::GetPropType(handle, string)
+Description: Arguments: ( entity, propertyName ) - return the prop type as a string
+
+Function:    CNetPropManager::GetPropVector
+Signature:   Vector CNetPropManager::GetPropVector(handle, string)
+Description: Arguments: ( entity, propertyName )
+
+Function:    CNetPropManager::GetPropVectorArray
+Signature:   Vector CNetPropManager::GetPropVectorArray(handle, string, int)
+Description: Arguments: ( entity, propertyName, arrayElement )
+
+Function:    CNetPropManager::GetTable
+Signature:   void CNetPropManager::GetTable(handle, int, handle)
+Description: Arguments: ( entity, iPropType, table ) - Fills in a passed table with all props of a specified type for the provided entity (set iPropType to 0 for SendTable or 1 for DataMap)
+
+Function:    CNetPropManager::HasProp
+Signature:   bool CNetPropManager::HasProp(handle, string)
+Description: Arguments: ( entity, propertyName )
+
+Function:    CNetPropManager::SetPropBool
+Signature:   void CNetPropManager::SetPropBool(handle, string, bool)
+Description: Arguments: ( entity, propertyName, value )
+
+Function:    CNetPropManager::SetPropBoolArray
+Signature:   void CNetPropManager::SetPropBoolArray(handle, string, bool, int)
+Description: Arguments: ( entity, propertyName, value, arrayElement )
+
+Function:    CNetPropManager::SetPropEntity
+Signature:   void CNetPropManager::SetPropEntity(handle, string, handle)
+Description: Arguments: ( entity, propertyName, value )
+
+Function:    CNetPropManager::SetPropEntityArray
+Signature:   void CNetPropManager::SetPropEntityArray(handle, string, handle, int)
+Description: Arguments: ( entity, propertyName, value, arrayElement )
+
+Function:    CNetPropManager::SetPropFloat
+Signature:   void CNetPropManager::SetPropFloat(handle, string, float)
+Description: Arguments: ( entity, propertyName, value )
+
+Function:    CNetPropManager::SetPropFloatArray
+Signature:   void CNetPropManager::SetPropFloatArray(handle, string, float, int)
+Description: Arguments: ( entity, propertyName, value, arrayElement )
+
+Function:    CNetPropManager::SetPropInt
+Signature:   void CNetPropManager::SetPropInt(handle, string, int)
+Description: Arguments: ( entity, propertyName, value )
+
+Function:    CNetPropManager::SetPropIntArray
+Signature:   void CNetPropManager::SetPropIntArray(handle, string, int, int)
+Description: Arguments: ( entity, propertyName, value, arrayElement )
+
+Function:    CNetPropManager::SetPropString
+Signature:   void CNetPropManager::SetPropString(handle, string, string)
+Description: Arguments: ( entity, propertyName, value )
+
+Function:    CNetPropManager::SetPropStringArray
+Signature:   void CNetPropManager::SetPropStringArray(handle, string, string, int)
+Description: Arguments: ( entity, propertyName, value, arrayElement )
+
+Function:    CNetPropManager::SetPropVector
+Signature:   void CNetPropManager::SetPropVector(handle, string, Vector)
+Description: Arguments: ( entity, propertyName, value )
+
+Function:    CNetPropManager::SetPropVectorArray
+Signature:   void CNetPropManager::SetPropVectorArray(handle, string, Vector, int)
+Description: Arguments: ( entity, propertyName, value, arrayElement )
+        </div><br>
+        <a onclick="toggleText(12)">CPlayerVoiceListener</a>
+        <div id="bigTextBox12" class="hidden-box">NOTE: Can be accessed with "PlayerVoiceListener" global
+
+Function:    CPlayerVoiceListener::GetPlayerSpeechDuration
+Signature:   float CPlayerVoiceListener::GetPlayerSpeechDuration(int)
+Description: Returns the number of seconds the player has been continuously speaking.
+
+Function:    CPlayerVoiceListener::IsPlayerSpeaking
+Signature:   bool CPlayerVoiceListener::IsPlayerSpeaking(int)
+Description: Returns whether the player specified is speaking.
+        </div><br>
+        <a onclick="toggleText(13)">CPointScriptTemplate</a>
+        <div id="bigTextBox13" class="hidden-box">Function:    CPointScriptTemplate::AddTemplate
+Signature:   void CPointScriptTemplate::AddTemplate(string, handle)
+Description: Add an entity to the template spawner
+
+Function:    CPointScriptTemplate::SetGroupSpawnTables
+Signature:   void CPointScriptTemplate::SetGroupSpawnTables(handle, handle)
+Description: Cache the group spawn tables
+        </div><br>
+        <a onclick="toggleText(14)">CSceneEntity</a>
+        <div id="bigTextBox14" class="hidden-box">Function:    CSceneEntity::AddBroadcastTeamTarget
+Signature:   void CSceneEntity::AddBroadcastTeamTarget(int)
+Description: Adds a team (by index) to the broadcast list
+
+Function:    CSceneEntity::EstimateLength
+Signature:   float CSceneEntity::EstimateLength()
+Description: Returns length of this scene in seconds.
+
+Function:    CSceneEntity::FindNamedEntity
+Signature:   handle CSceneEntity::FindNamedEntity(string)
+Description: given an entity reference, such as !target, get actual entity from scene object
+
+Function:    CSceneEntity::IsPaused
+Signature:   bool CSceneEntity::IsPaused()
+Description: If this scene is currently paused.
+
+Function:    CSceneEntity::IsPlayingBack
+Signature:   bool CSceneEntity::IsPlayingBack()
+Description: If this scene is currently playing.
+
+Function:    CSceneEntity::LoadSceneFromString
+Signature:   bool CSceneEntity::LoadSceneFromString(string, string)
+Description: given a dummy scene name and a vcd string, load the scene
+
+Function:    CSceneEntity::RemoveBroadcastTeamTarget
+Signature:   void CSceneEntity::RemoveBroadcastTeamTarget(int)
+Description: Removes a team (by index) from the broadcast list
+        </div><br>
+        <a onclick="toggleText(15)">CScriptEntityOutputs</a>
+        <div id="bigTextBox15" class="hidden-box">NOTE: Can be accessed with "EntityOutputs" global
+
+Function:    CScriptEntityOutputs::AddOutput
+Signature:   void CScriptEntityOutputs::AddOutput(handle, string, string, string, string, float, int)
+Description: Arguments: ( entity, outputName, targetName, inputName, parameter, delay, timesToFire ) - add a new output to the entity
+
+Function:    CScriptEntityOutputs::GetNumElements
+Signature:   int CScriptEntityOutputs::GetNumElements(handle, string)
+Description: Arguments: ( entity, outputName ) - returns the number of array elements
+
+Function:    CScriptEntityOutputs::GetOutputTable
+Signature:   void CScriptEntityOutputs::GetOutputTable(handle, string, handle, int)
+Description: Arguments: ( entity, outputName, table, arrayElement ) - returns a table of output information
+
+Function:    CScriptEntityOutputs::HasAction
+Signature:   bool CScriptEntityOutputs::HasAction(handle, string)
+Description: Arguments: ( entity, outputName ) - returns true if an action exists for the output
+
+Function:    CScriptEntityOutputs::HasOutput
+Signature:   bool CScriptEntityOutputs::HasOutput(handle, string)
+Description: Arguments: ( entity, outputName ) - returns true if the output exists
+
+Function:    CScriptEntityOutputs::RemoveOutput
+Signature:   void CScriptEntityOutputs::RemoveOutput(handle, string, string, string, string)
+Description: Arguments: ( entity, outputName, targetName, inputName, parameter ) - remove an output from the entity
+        </div><br>
+        <a onclick="toggleText(16)">CScriptKeyValues</a>
+        <div id="bigTextBox16" class="hidden-box">Function:    CScriptKeyValues::FindKey
+Signature:   handle CScriptKeyValues::FindKey(string)
+Description: Given a KeyValues object and a key name, find a KeyValues object associated with the key name
+
+Function:    CScriptKeyValues::GetFirstSubKey
+Signature:   handle CScriptKeyValues::GetFirstSubKey()
+Description: Given a KeyValues object, return the first sub key object
+
+Function:    CScriptKeyValues::GetKeyBool
+Signature:   bool CScriptKeyValues::GetKeyBool(string)
+Description: Given a KeyValues object and a key name, return associated bool value
+
+Function:    CScriptKeyValues::GetKeyFloat
+Signature:   float CScriptKeyValues::GetKeyFloat(string)
+Description: Given a KeyValues object and a key name, return associated float value
+
+Function:    CScriptKeyValues::GetKeyInt
+Signature:   int CScriptKeyValues::GetKeyInt(string)
+Description: Given a KeyValues object and a key name, return associated integer value
+
+Function:    CScriptKeyValues::GetKeyString
+Signature:   string CScriptKeyValues::GetKeyString(string)
+Description: Given a KeyValues object and a key name, return associated string value
+
+Function:    CScriptKeyValues::GetNextKey
+Signature:   handle CScriptKeyValues::GetNextKey()
+Description: Given a KeyValues object, return the next key object in a sub key group
+
+Function:    CScriptKeyValues::IsKeyEmpty
+Signature:   bool CScriptKeyValues::IsKeyEmpty(string)
+Description: Given a KeyValues object and a key name, return true if key name has no value
+
+Function:    CScriptKeyValues::ReleaseKeyValues
+Signature:   void CScriptKeyValues::ReleaseKeyValues()
+Description: Given a root KeyValues object, release its contents
+        </div><br>
+        <a onclick="toggleText(17)">Convars</a>
+        <div id="bigTextBox17" class="hidden-box">NOTE: Can be accessed with "Convars" global, for example: Convars.GetBool("sv_cheats")
+		
+Function:    Convars::GetBool
+Signature:   (unknown) Convars::GetBool(string)
+Description: GetBool(name) : returns the convar as a bool. May return null if no such convar.
+
+Function:    Convars::GetClientConvarValue
+Signature:   string Convars::GetClientConvarValue(string, int)
+Description: GetClientConvarValue(name) : returns the convar value for the entindex as a string.
+
+Function:    Convars::GetFloat
+Signature:   (unknown) Convars::GetFloat(string)
+Description: GetFloat(name) : returns the convar as a float. May return null if no such convar.
+
+Function:    Convars::GetInt
+Signature:   (unknown) Convars::GetInt(string)
+Description: GetInt(name) : returns the convar as an int. May return null if no such convar.
+
+Function:    Convars::GetStr
+Signature:   (unknown) Convars::GetStr(string)
+Description: GetStr(name) : returns the convar as a string. May return null if no such convar.
+
+Function:    Convars::IsConVarOnAllowList
+Signature:   bool Convars::IsConVarOnAllowList(string)
+Description: IsConVarOnAllowList(name) : checks if the convar is allowed to be used and is in cfg/vscript_convar_allowlist.txt. Please be nice with this and use it for *compatibility* if you need check support and NOT to force server owners to allow hostname to be set... or else this will simply lie and return true in future. ;-) You have been warned!
+
+Function:    Convars::SetValue
+Signature:   void Convars::SetValue(string, (any))
+Description: SetValue(name, value) : sets the value of the convar. The convar must be in cfg/vscript_convar_allowlist.txt to be set. Supported types are bool, int, float, string.
+        </div><br>
+        <a onclick="toggleText(18)">ILocomotion</a>
+        <div id="bigTextBox18" class="hidden-box">Function:    ILocomotion::Approach
+Signature:   void ILocomotion::Approach(Vector, float)
+Description: The primary locomotive method. Sets the goal destination for the bot
+
+Function:    ILocomotion::ClearStuckStatus
+Signature:   void ILocomotion::ClearStuckStatus(string)
+Description: Reset stuck status to un-stuck
+
+Function:    ILocomotion::ClimbUpToLedge
+Signature:   bool ILocomotion::ClimbUpToLedge(Vector, Vector, handle)
+Description: Initiate a jump to an adjacent high ledge, return false if climb can't start
+
+Function:    ILocomotion::DriveTo
+Signature:   void ILocomotion::DriveTo(Vector)
+Description: Move the bot to the precise given position immediately, updating internal state
+
+Function:    ILocomotion::FaceTowards
+Signature:   void ILocomotion::FaceTowards(Vector)
+Description: Rotate body to face towards target
+
+Function:    ILocomotion::FractionPotentialGap
+Signature:   float ILocomotion::FractionPotentialGap(Vector, Vector)
+Description: If the locomotor cannot jump over the gap, returns the fraction of the jumpable ray
+
+Function:    ILocomotion::FractionPotentiallyTraversable
+Signature:   float ILocomotion::FractionPotentiallyTraversable(Vector, Vector, bool)
+Description: If the locomotor could not move along the line given, returns the fraction of the walkable ray.
+
+Function:    ILocomotion::GetDeathDropHeight
+Signature:   float ILocomotion::GetDeathDropHeight()
+Description: Distance at which we will die if we fall
+
+Function:    ILocomotion::GetDesiredSpeed
+Signature:   float ILocomotion::GetDesiredSpeed()
+Description: Get desired speed for locomotor movement
+
+Function:    ILocomotion::GetFeet
+Signature:   Vector ILocomotion::GetFeet()
+Description: Return position of feet - the driving point where the bot contacts the ground
+
+Function:    ILocomotion::GetGround
+Signature:   handle ILocomotion::GetGround()
+Description: Return the current ground entity or NULL if not on the ground
+
+Function:    ILocomotion::GetGroundMotionVector
+Signature:   Vector ILocomotion::GetGroundMotionVector()
+Description: Return unit vector in XY plane describing our direction of motion - even if we are currently not moving
+
+Function:    ILocomotion::GetGroundNormal
+Signature:   Vector ILocomotion::GetGroundNormal()
+Description: Surface normal of the ground we are in contact with
+
+Function:    ILocomotion::GetGroundSpeed
+Signature:   float ILocomotion::GetGroundSpeed()
+Description: Return current world space speed in XY plane
+
+Function:    ILocomotion::GetMaxAcceleration
+Signature:   float ILocomotion::GetMaxAcceleration()
+Description: Return maximum acceleration of locomotor
+
+Function:    ILocomotion::GetMaxDeceleration
+Signature:   float ILocomotion::GetMaxDeceleration()
+Description: Return maximum deceleration of locomotor
+
+Function:    ILocomotion::GetMaxJumpHeight
+Signature:   float ILocomotion::GetMaxJumpHeight()
+Description: Return maximum height of a jump
+
+Function:    ILocomotion::GetMotionVector
+Signature:   Vector ILocomotion::GetMotionVector()
+Description: Return unit vector describing our direction of motion - even if we are currently not moving
+
+Function:    ILocomotion::GetRunSpeed
+Signature:   float ILocomotion::GetRunSpeed()
+Description: Get maximum running speed
+
+Function:    ILocomotion::GetSpeed
+Signature:   float ILocomotion::GetSpeed()
+Description: Return current world space speed (magnitude of velocity)
+
+Function:    ILocomotion::GetSpeedLimit
+Signature:   float ILocomotion::GetSpeedLimit()
+Description: Get maximum speed bot can reach, regardless of desired speed
+
+Function:    ILocomotion::GetStepHeight
+Signature:   float ILocomotion::GetStepHeight()
+Description: If delta Z is greater than this, we have to jump to get up
+
+Function:    ILocomotion::GetStuckDuration
+Signature:   float ILocomotion::GetStuckDuration()
+Description: Return how long we've been stuck
+
+Function:    ILocomotion::GetTraversableSlopeLimit
+Signature:   float ILocomotion::GetTraversableSlopeLimit()
+Description: Return Z component of unit normal of steepest traversable slope
+
+Function:    ILocomotion::GetVelocity
+Signature:   Vector ILocomotion::GetVelocity()
+Description: Return current world space velocity
+
+Function:    ILocomotion::GetWalkSpeed
+Signature:   float ILocomotion::GetWalkSpeed()
+Description: Get maximum walking speed
+
+Function:    ILocomotion::HasPotentialGap
+Signature:   float ILocomotion::HasPotentialGap(Vector, Vector)
+Description: Return true if there is a possible gap that will need to be jumped over
+
+Function:    ILocomotion::IsAbleToClimb
+Signature:   bool ILocomotion::IsAbleToClimb()
+Description: Return true if this bot can climb arbitrary geometry it encounters
+
+Function:    ILocomotion::IsAbleToJumpAcrossGaps
+Signature:   bool ILocomotion::IsAbleToJumpAcrossGaps()
+Description: Return true if this bot can jump across gaps in its path
+
+Function:    ILocomotion::IsAreaTraversable
+Signature:   bool ILocomotion::IsAreaTraversable(handle)
+Description: Return true if given area can be used for navigation
+
+Function:    ILocomotion::IsAttemptingToMove
+Signature:   bool ILocomotion::IsAttemptingToMove()
+Description: Return true if we have tried to Approach() or DriveTo() very recently
+
+Function:    ILocomotion::IsClimbingOrJumping
+Signature:   bool ILocomotion::IsClimbingOrJumping()
+Description: Is jumping in any form
+
+Function:    ILocomotion::IsClimbingUpToLedge
+Signature:   bool ILocomotion::IsClimbingUpToLedge()
+Description: Is climbing up to a high ledge
+
+Function:    ILocomotion::IsEntityTraversable
+Signature:   bool ILocomotion::IsEntityTraversable(handle, bool)
+Description: Return true if the entity handle is traversable
+
+Function:    ILocomotion::IsGap
+Signature:   bool ILocomotion::IsGap(Vector, Vector)
+Description: Return true if there is a gap here when moving in the given direction
+
+Function:    ILocomotion::IsJumpingAcrossGap
+Signature:   bool ILocomotion::IsJumpingAcrossGap()
+Description: Is jumping across a gap to the far side
+
+Function:    ILocomotion::IsOnGround
+Signature:   bool ILocomotion::IsOnGround()
+Description: Return true if standing on something
+
+Function:    ILocomotion::IsPotentiallyTraversable
+Signature:   float ILocomotion::IsPotentiallyTraversable(Vector, Vector, bool)
+Description: Return true if this locomotor could potentially move along the line given.
+
+Function:    ILocomotion::IsRunning
+Signature:   bool ILocomotion::IsRunning()
+Description: Is running?
+
+Function:    ILocomotion::IsScrambling
+Signature:   bool ILocomotion::IsScrambling()
+Description: Is in the middle of a complex action (climbing a ladder, climbing a ledge, jumping, etc) that shouldn't be interrupted
+
+Function:    ILocomotion::IsStuck
+Signature:   bool ILocomotion::IsStuck()
+Description: Return true if bot is stuck. If the locomotor cannot make progress, it becomes stuck and can only leave this stuck state by successfully movingand becoming un-stuck.
+
+Function:    ILocomotion::Jump
+Signature:   void ILocomotion::Jump()
+Description: Initiate a simple undirected jump in the air
+
+Function:    ILocomotion::JumpAcrossGap
+Signature:   void ILocomotion::JumpAcrossGap(Vector, Vector)
+Description: Initiate a jump across an empty volume of space to far side
+
+Function:    ILocomotion::OnLandOnGround
+Signature:   void ILocomotion::OnLandOnGround(handle)
+Description: Manually run the OnLandOnGround callback. Typically invoked when bot lands on the ground after being in the air
+
+Function:    ILocomotion::OnLeaveGround
+Signature:   void ILocomotion::OnLeaveGround(handle)
+Description: Manually run the OnLeaveGround callback. Typically invoked when bot leaves ground for any reason
+
+Function:    ILocomotion::Run
+Signature:   void ILocomotion::Run()
+Description: Set desired movement speed to running
+
+Function:    ILocomotion::SetDesiredSpeed
+Signature:   void ILocomotion::SetDesiredSpeed(float)
+Description: Set desired speed for locomotor movement
+
+Function:    ILocomotion::SetSpeedLimit
+Signature:   void ILocomotion::SetSpeedLimit(float)
+Description: Set maximum speed bot can reach, regardless of desired speed
+
+Function:    ILocomotion::Stop
+Signature:   void ILocomotion::Stop()
+Description: Set desired movement speed to stopped
+
+Function:    ILocomotion::Walk
+Signature:   void ILocomotion::Walk()
+Description: Set desired movement speed to walking
+        </div><br>
+        <a onclick="toggleText(19)">INextBotComponent</a>
+        <div id="bigTextBox19" class="hidden-box">Function:    INextBotComponent::ComputeUpdateInterval
+Signature:   bool INextBotComponent::ComputeUpdateInterval()
+Description: Recomputes the component update interval
+
+Function:    INextBotComponent::GetUpdateInterval
+Signature:   float INextBotComponent::GetUpdateInterval()
+Description: Returns the component update interval
+
+Function:    INextBotComponent::Reset
+Signature:   void INextBotComponent::Reset()
+Description: Resets the internal update state
+        </div><br>
+        <a onclick="toggleText(20)">NextBotCombatCharacter</a>
+        <div id="bigTextBox20" class="hidden-box">Function:    NextBotCombatCharacter::ClearImmobileStatus
+Signature:   void NextBotCombatCharacter::ClearImmobileStatus()
+Description: Clear immobile status
+
+Function:    NextBotCombatCharacter::FlagForUpdate
+Signature:   void NextBotCombatCharacter::FlagForUpdate(bool)
+Description: Flag this bot for update
+
+Function:    NextBotCombatCharacter::GetBodyInterface
+Signature:   handle NextBotCombatCharacter::GetBodyInterface()
+Description: Get this bot's body interface
+
+Function:    NextBotCombatCharacter::GetBotId
+Signature:   int NextBotCombatCharacter::GetBotId()
+Description: Get this bot's id
+
+Function:    NextBotCombatCharacter::GetImmobileDuration
+Signature:   float NextBotCombatCharacter::GetImmobileDuration()
+Description: How long have we been immobile
+
+Function:    NextBotCombatCharacter::GetImmobileSpeedThreshold
+Signature:   float NextBotCombatCharacter::GetImmobileSpeedThreshold()
+Description: Return units/second below which this actor is considered immobile
+
+Function:    NextBotCombatCharacter::GetIntentionInterface
+Signature:   handle NextBotCombatCharacter::GetIntentionInterface()
+Description: Get this bot's intention interface
+
+Function:    NextBotCombatCharacter::GetLocomotionInterface
+Signature:   handle NextBotCombatCharacter::GetLocomotionInterface()
+Description: Get this bot's locomotion interface
+
+Function:    NextBotCombatCharacter::GetTickLastUpdate
+Signature:   int NextBotCombatCharacter::GetTickLastUpdate()
+Description: Get last update tick
+
+Function:    NextBotCombatCharacter::GetVisionInterface
+Signature:   handle NextBotCombatCharacter::GetVisionInterface()
+Description: Get this bot's vision interface
+
+Function:    NextBotCombatCharacter::IsEnemy
+Signature:   bool NextBotCombatCharacter::IsEnemy(handle)
+Description: Return true if given entity is our enemy
+
+Function:    NextBotCombatCharacter::IsFlaggedForUpdate
+Signature:   bool NextBotCombatCharacter::IsFlaggedForUpdate()
+Description: Is this bot flagged for update
+
+Function:    NextBotCombatCharacter::IsFriend
+Signature:   bool NextBotCombatCharacter::IsFriend(handle)
+Description: Return true if given entity is our friend
+
+Function:    NextBotCombatCharacter::IsImmobile
+Signature:   bool NextBotCombatCharacter::IsImmobile()
+Description: Return true if we haven't moved in awhile
+        </div><br>
+        <a onclick="toggleText(21)"><b>Global Functions</b></a>
+        <div id="bigTextBox21" class="hidden-box">Function:    AddThinkToEnt
+Signature:   void AddThinkToEnt(handle, string)
+Description: Function name in the entity scriptscope that will be called 10 times per second
+
+Function:    ClientPrint
+Signature:   void ClientPrint(handle, int, string)
+Description: (player, slot, message) Print a client message. Slot 3 is chatbox, 4 is top middle of screen
+
+Function:    CreateProp
+Signature:   handle CreateProp(string, Vector, string, int)
+Description: Create a physics prop
+
+Function:    CreateSceneEntity
+Signature:   handle CreateSceneEntity(string)
+Description: Create a scene entity to play the specified scene.
+
+Function:    DebugDrawBox
+Signature:   void DebugDrawBox(Vector, Vector, Vector, int, int, int, int, float)
+Description: Draw a debug overlay box
+
+Function:    DebugDrawBoxAngles
+Signature:   void DebugDrawBoxAngles(Vector, Vector, Vector, QAngle, Vector, float, float)
+Description: Draw a debug oriented box (cent, min, max, angles(p,y,r), vRgb, a, duration)
+
+Function:    DebugDrawBoxDirection
+Signature:   void DebugDrawBoxDirection(Vector, Vector, Vector, Vector, Vector, float, float)
+Description: Draw a debug forward box (cent, min, max, forward, vRgb, a, duration)
+
+Function:    DebugDrawCircle
+Signature:   void DebugDrawCircle(Vector, Vector, float, float, bool, float)
+Description: Draw a debug circle (center, rad, vRgb, a, ztest, duration)
+
+Function:    DebugDrawClear
+Signature:   void DebugDrawClear()
+Description: Try to clear all the debug overlay info
+
+Function:    DebugDrawLine
+Signature:   void DebugDrawLine(Vector, Vector, int, int, int, bool, float)
+Description: Draw a debug overlay line
+
+Function:    DebugDrawLine_vCol
+Signature:   void DebugDrawLine_vCol(Vector, Vector, Vector, bool, float)
+Description: Draw a debug line using color vec (start, end, vRgb, a, ztest, duration)
+
+Function:    DebugDrawScreenTextLine
+Signature:   void DebugDrawScreenTextLine(float, float, int, string, int, int, int, int, float)
+Description: Draw text with a line offset
+
+Function:    DebugDrawText
+Signature:   void DebugDrawText(Vector, string, bool, float)
+Description: Draw text in 3d (origin, text, bViewCheck, duration)
+
+Function:    DispatchParticleEffect
+Signature:   void DispatchParticleEffect(string, Vector, Vector)
+Description: Dispatches a one-off particle system
+
+Function:    DoIncludeScript
+Signature:   bool DoIncludeScript(string, handle)
+Description: Execute a script (internal)
+
+Function:    EmitAmbientSoundOn
+Signature:   void EmitAmbientSoundOn(string, float, int, int, handle)
+Description: Play named ambient sound on an entity.
+
+Function:    EmitSoundEx
+Signature:   void EmitSoundEx(handle)
+Description: Play a sound. Takes in a script table of params.
+
+Function:    EmitSoundOn
+Signature:   void EmitSoundOn(string, handle)
+Description: Play named sound on Entity. Legacy only, use EmitSoundEx.
+
+Function:    EmitSoundOnClient
+Signature:   void EmitSoundOnClient(string, handle)
+Description: Play named sound only on the client for the passed in player. NOTE: This only supports soundscripts. Legacy only, use EmitSoundEx.
+
+Function:    EntFire
+Signature:   function EntFire(target, action, value, delay, activator)
+Description: Generate and entity i/o event
+
+Function:    EntFireByHandle
+Signature:   void EntFireByHandle(handle, string, string, float, handle, handle)
+Description: Generate and entity i/o event. First parameter is an entity instance.
+
+Function:    EntIndexToHScript
+Signature:   handle EntIndexToHScript(int)
+Description: Turn an entity index integer to an HScript representing that entity's script instance.
+
+Function:    FileToString
+Signature:   string FileToString(string)
+Description: Reads a string from a file to send to script
+
+Function:    FireGameEvent
+Signature:   bool FireGameEvent(string, handle)
+Description: Fire a game event to a listening callback function in script. Parameters are passed in a squirrel table.
+
+Function:    FireScriptHook
+Signature:   bool FireScriptHook(string, handle)
+Description: Fire a script hoook to a listening callback function in script. Parameters are passed in a squirrel table.
+
+Function:    FrameTime
+Signature:   float FrameTime()
+Description: Get the time spent on the server in the last frame
+
+Function:    GetDeveloperLevel
+Signature:   int GetDeveloperLevel()
+Description: Gets the level of 'developer'
+
+Function:    GetFrameCount
+Signature:   int GetFrameCount()
+Description: Returns the engines current frame count
+
+Function:    GetFriction
+Signature:   float GetFriction(handle)
+Description: Returns the Friction on a player entity, meaningless if not a player
+
+Function:    GetListenServerHost
+Signature:   handle GetListenServerHost()
+Description: Get the local player on a listen server.
+
+Function:    GetMapName
+Signature:   string GetMapName()
+Description: Get the name of the map.
+
+Function:    GetModelIndex
+Signature:   int GetModelIndex(string)
+Description: Returns the index of the named model.
+
+Function:    GetPhysAngularVelocity
+Signature:   Vector GetPhysAngularVelocity(handle)
+Description: Get Angular Velocity for VPHYS or normal object
+
+Function:    GetPhysVelocity
+Signature:   Vector GetPhysVelocity(handle)
+Description: Get Velocity for VPHYS or normal object
+
+Function:    GetPlayerFromUserID
+Signature:   handle GetPlayerFromUserID(int)
+Description: Given a user id, return the entity, or null
+
+Function:    GetSoundDuration
+Signature:   float GetSoundDuration(string, string)
+Description: Returns float duration of the sound. Takes soundname and optional actormodelname.
+
+Function:    IsDedicatedServer
+Signature:   bool IsDedicatedServer()
+Description: Returns true if this server is a dedicated server.
+
+Function:    IsModelPrecached
+Signature:   bool IsModelPrecached(string)
+Description: Checks if the modelname is precached.
+
+Function:    IsPlayerABot
+Signature:   bool IsPlayerABot(handle)
+Description: Is this player/entity a bot
+
+Function:    IsSoundPrecached
+Signature:   bool IsSoundPrecached(string)
+Description: Takes a sound name
+
+Function:    LocalTime
+Signature:   void LocalTime(handle)
+Description: Fills out a table with the local time (second, minute, hour, day, month, year, dayofweek, dayofyear, daylightsavings)
+
+Function:    MaxClients
+Signature:   float MaxClients()
+Description: Get the current number of max clients set by the maxplayers command.
+
+Function:    PickupObject
+Signature:   void PickupObject(handle, handle)
+Description: Have a player pickup a nearby named entity
+
+Function:    PlayerInstanceFromIndex
+Signature:   handle PlayerInstanceFromIndex(int)
+Description: Get a script instance of a player by index.
+
+Function:    PrecacheEntityFromTable
+Signature:   bool PrecacheEntityFromTable(handle)
+Description: Precache an entity from KeyValues in table
+
+Function:    PrecacheModel
+Signature:   int PrecacheModel(string)
+Description: Precache a model. Returns the modelindex.
+
+Function:    PrecacheScriptSound
+Signature:   bool PrecacheScriptSound(string)
+Description: Precache a sound.
+
+Function:    PrecacheSound
+Signature:   bool PrecacheSound(string)
+Description: Precache a sound.
+
+Function:    RandomFloat
+Signature:   float RandomFloat(float, float)
+Description: Generate a random floating point number within a range, inclusive
+
+Function:    RandomInt
+Signature:   int RandomInt(int, int)
+Description: Generate a random integer within a range, inclusive
+
+Function:    RegisterScriptGameEventListener
+Signature:   void RegisterScriptGameEventListener(string)
+Description: Register as a listener for a game event from script.
+
+Function:    RegisterScriptHookListener
+Signature:   void RegisterScriptHookListener(string)
+Description: Register as a listener for a script hook from script.
+
+Function:    RotateOrientation
+Signature:   QAngle RotateOrientation(QAngle, QAngle)
+Description: Rotate a QAngle by another QAngle.
+
+Function:    RotatePosition
+Signature:   Vector RotatePosition(Vector, QAngle, Vector)
+Description: Rotate a Vector around a point.
+
+Function:    Say
+Signature:   void Say(handle, string, bool)
+Description: Have Entity say string, and teamOnly or not
+
+Function:    ScreenFade
+Signature:   void ScreenFade(handle, int, int, int, int, float, float, int)
+Description: Start a screenfade with the following parameters. player, red, green, blue, alpha, flFadeTime, flFadeHold, flags
+
+Function:    ScreenShake
+Signature:   void ScreenShake(Vector, float, float, float, float, int, bool)
+Description: Start a screenshake with the following parameters. vecCenter, flAmplitude, flFrequency, flDuration, flRadius, eCommand( SHAKE_START = 0, SHAKE_STOP = 1 ), bAirShake
+
+Function:    ScriptHooksEnabled
+Signature:   bool ScriptHooksEnabled()
+Description: Returns whether script hooks are currently enabled.
+
+Function:    SendGlobalGameEvent
+Signature:   bool SendGlobalGameEvent(string, handle)
+Description: Sends a real game event to everything. Parameters are passed in a squirrel table.
+
+Function:    SendToConsole
+Signature:   void SendToConsole(string)
+Description: Send a string to the console as a command
+
+Function:    SendToConsoleServer
+Signature:   void SendToConsoleServer(string)
+Description: Copy of SendToServerConsole with another name for compat.
+
+Function:    SendToServerConsole
+Signature:   void SendToServerConsole(string)
+Description: Send a string that gets executed on the server as a ServerCommand. Respects sv_allow_point_servercommand.
+
+Function:    SetFakeClientConVarValue
+Signature:   void SetFakeClientConVarValue(handle, string, string)
+Description: Sets a USERINFO client ConVar for a fakeclient
+
+Function:    SetSkyboxTexture
+Signature:   void SetSkyboxTexture(string)
+Description: Sets the current skybox texture
+
+Function:    ShowMessage
+Signature:   void ShowMessage(string)
+Description: Print a hud message on all clients
+
+Function:    SpawnEntityFromTable
+Signature:   handle SpawnEntityFromTable(string, handle)
+Description: Spawn entity from KeyValues in table - 'name' is entity name, rest are KeyValues for spawn.
+
+Function:    SpawnEntityGroupFromTable
+Signature:   bool SpawnEntityGroupFromTable(handle)
+Description: Hierarchically spawn an entity group from a set of spawn tables.
+
+Function:    StopAmbientSoundOn
+Signature:   void StopAmbientSoundOn(string, handle)
+Description: Stop named ambient sound on an entity.
+
+Function:    StopSoundOn
+Signature:   void StopSoundOn(string, handle)
+Description: Stop named sound on Entity.
+
+Function:    StringToFile
+Signature:   bool StringToFile(string, string)
+Description: Store a string to a file for later reading
+
+Function:    Time
+Signature:   float Time()
+Description: Get the current server time
+
+Function:    TraceHull
+Signature:   bool TraceHull(handle)
+Description: Pass table - Inputs: start, end, hullmin, hullmax, mask, ignore  -- outputs: pos, fraction, hit, enthit, allsolid, startpos, endpos, startsolid, plane_normal, plane_dist, surface_name, surface_flags, surface_props
+
+Function:    TraceLine
+Signature:   float TraceLine(Vector, Vector, handle)
+Description: given 2 points & ent to ignore, return fraction along line that hits world or models
+
+Function:    TraceLineEx
+Signature:   bool TraceLineEx(handle)
+Description: Pass table - Inputs: start, end, mask, ignore  -- outputs: pos, fraction, hit, enthit, allsolid, startpos, endpos, startsolid, plane_normal, plane_dist, surface_name, surface_flags, surface_props
+
+Function:    TraceLinePlayersIncluded
+Signature:   float TraceLinePlayersIncluded(Vector, Vector, handle)
+Description: given 2 points & ent to ignore, return fraction along line that hits world, models, players or npcs
+
+Function:    UniqueString
+Signature:   function UniqueString(string)
+Description: Generate a string guaranteed to be unique across the life of the script VM, with an optional root string. Useful for adding data to tables when not sure what keys are already in use in that table.
+        </div><br>
+    </div>
+</body>
+</html>
